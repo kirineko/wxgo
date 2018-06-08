@@ -27,7 +27,7 @@ func Init() {
 	//注册驱动
 	orm.RegisterDriver("mysql", orm.DRMySQL)
 	//设置默认数据库
-	orm.RegisterDataBase("default", "mysql", "root@/wechat?charset=utf8", 30)
+	orm.RegisterDataBase("default", "mysql", "root:root@/wechat?charset=utf8", 30)
 	//注册定义的model
 	orm.RegisterModel(new(WxAccessToken), new(WxBase))
 
