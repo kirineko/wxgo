@@ -32,5 +32,5 @@ func Init() {
 	orm.RegisterModel(new(WxAccessToken), new(WxBase))
 
 	// 创建table
-	orm.RunSyncdb("default", false, false)
+	orm.RunSyncdb("default", false, true)
 }
