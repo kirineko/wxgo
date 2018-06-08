@@ -9,13 +9,13 @@ import (
 	"strings"
 )
 
-type WxConnectController struct {
+type WxController struct {
 	beego.Controller
 }
 
 const Token = "hellowx2018"
 
-func (c *WxConnectController) Get() {
+func (c *WxController) Get() {
 
 	timestamp, nonce, signatureIn := c.GetString("timestamp"), c.GetString("nonce"), c.GetString("signature")
 	signatureGen := makeSignature(timestamp, nonce)
